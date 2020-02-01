@@ -1,7 +1,7 @@
 VERSION := 1.0.0
 SHELL := /bin/bash
 GO := GO15VENDOREXPERIMENT=1 go
-NAME := go-demo-8
+NAME := go-demo-9
 OS := $(shell uname)
 MAIN_GO := main.go
 ROOT_PACKAGE := $(GIT_PROVIDER)/vfarcic/$(NAME)
