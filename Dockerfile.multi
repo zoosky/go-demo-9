@@ -1,7 +1,6 @@
 FROM golang:1.13.7 AS build
 ADD . /src
 WORKDIR /src
-RUN make unittest
 RUN make linux
 
 FROM scratch

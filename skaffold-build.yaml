@@ -1,0 +1,9 @@
+apiVersion: skaffold/v2alpha3
+kind: Config
+metadata:
+  name: go-demo-9
+build:
+  local: {}
+  artifacts:
+  - image: go-demo-9
+    docker: {}
