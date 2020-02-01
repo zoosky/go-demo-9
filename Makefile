@@ -1,4 +1,3 @@
-VERSION := 1.0.0
 SHELL := /bin/bash
 GO := GO15VENDOREXPERIMENT=1 go
 NAME := go-demo-9

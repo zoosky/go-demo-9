@@ -1,6 +1,7 @@
-FROM golang:1.12 AS build
+FROM golang:1.13.7 AS build
 ADD . /src
 WORKDIR /src
+RUN echo $GOPATH
 RUN make linux
 
 FROM scratch
