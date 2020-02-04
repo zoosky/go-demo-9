@@ -102,7 +102,7 @@ func (s *MainTestSuite) Test_HelloServer_WritesHelloWorld() {
 
 	HelloServer(w, req)
 
-	w.AssertCalled(s.T(), "Write", []byte("hello, Istio!\n"))
+	w.AssertCalled(s.T(), "Write", []byte("hello, k8s!\n"))
 }
 
 func (s *MainTestSuite) Test_HelloServer_Waits_WhenDelayIsPresent() {
@@ -128,7 +128,7 @@ func (s *MainTestSuite) Test_HelloServer_OutputsVersion() {
 
 	HelloServer(w, req)
 
-	w.AssertCalled(s.T(), "Write", []byte("hello, Istio with version 1.2.3!\n"))
+	w.AssertCalled(s.T(), "Write", []byte("hello, k8s with version 1.2.3!\n"))
 }
 
 // VersionServer

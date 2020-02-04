@@ -1,0 +1,14 @@
+---
+# Source: mongodb/templates/pvc-standalone.yaml
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  labels:
+    app: go-demo-9-db
+  name: go-demo-9-db
+spec:
+  accessModes:
+    - "ReadWriteOnce"
+  resources:
+    requests:
+      storage: "1Gi"

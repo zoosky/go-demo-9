@@ -95,7 +95,7 @@ func HelloServer(w http.ResponseWriter, req *http.Request) {
 
 	logPrintf("%s request to %s\n", req.Method, req.RequestURI)
 	delay := req.URL.Query().Get("delay")
-	msg := "hello, Istio"
+	msg := "hello, k8s"
 	version := os.Getenv("VERSION")
 	if len(version) > 0 {
 		msg = fmt.Sprintf("%s with version %s", msg, version)
@@ -211,6 +211,3 @@ func recordMetrics(start time.Time, req *http.Request, code int) {
 		},
 	).Observe(duration.Seconds())
 }
-
-
-

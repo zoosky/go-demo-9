@@ -3,17 +3,24 @@ kind: Config
 metadata:
   name: go-demo-9
 build:
-  local: {}
+  cluster:
+    namespace: dev
+    dockerConfig:
+      path: ~/.docker/config.json
   artifacts:
   - image: go-demo-9
-    docker: {}
+    kaniko: {}
 profiles:
-- name: remote
+- name: dev-remote
   build:
-    cluster:
-      namespace: my-dev
-      dockerConfig:
-        path: ~/.docker/config.json
+    tagPolicy:
+      envTemplate:
+        template: "{{.IMAGE_NAME}}:{{.DEV_USER}}"
+- name: dev-local
+  build:
+    local: {}
     artifacts:
-    - image: go-demo-9
-      kaniko: {}
+    - docker: {}
+      image: go-demo-9
+    tagPolicy:
+      sha256: {}

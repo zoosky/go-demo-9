@@ -1,0 +1,16 @@
+---
+# Source: mongodb/templates/svc-standalone.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-demo-9-db
+  labels:
+    app: go-demo-9-db
+spec:
+  type: ClusterIP
+  ports:
+  - name: mongodb
+    port: 27017
+    targetPort: mongodb
+  selector:
+    app: go-demo-9-db
