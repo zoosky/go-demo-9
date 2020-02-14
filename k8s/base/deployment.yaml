@@ -21,6 +21,11 @@ spec:
         env:
         - name: DB
           value: go-demo-9-db
+        - name: VERSION
+          valueFrom:
+            configMapKeyRef:
+              name: go-demo-9
+              key: version
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080

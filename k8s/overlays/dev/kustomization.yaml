@@ -1,0 +1,8 @@
+commonLabels:
+  app: go-demo-9
+resources:
+- ../../base
+configMapGenerator:
+- name: go-demo-9
+  literals:
+    - version=latest

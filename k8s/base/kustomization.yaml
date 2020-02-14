@@ -1,0 +1,10 @@
+commonLabels:
+  app: go-demo-9
+resources:
+- deployment-db.yaml
+- deployment.yaml
+- hpa.yaml
+- ingress.yaml
+- pvc-db.yaml
+- service-db.yaml
+- service.yaml

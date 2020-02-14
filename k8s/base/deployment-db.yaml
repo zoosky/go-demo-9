@@ -19,7 +19,6 @@ spec:
     spec:
       securityContext:
         fsGroup: 1001      
-      initContainers:
       containers:
       - name: go-demo-9-db
         image: docker.io/bitnami/mongodb:4.2.2-debian-10-r0
