@@ -1,3 +1,5 @@
+image:
+  tag: latest
 hpa:
   enabled: false
 go-demo-9-db:
